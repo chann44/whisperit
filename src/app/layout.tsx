@@ -1,4 +1,6 @@
+import { AppProvider } from "@/components/providers";
 import { SiteHeader } from "@/components/site-header";
+import { Toaster } from "@/components/ui/toaster";
 import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
 import { Inter } from "next/font/google";
@@ -19,12 +21,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cn(font.className, "py-5")}>
-        <div className="container mx-auto max-w-7xl h-full">
-          <SiteHeader />
-          {children}
-        </div>
-      </body>
+      <AppProvider>
+        <body className={cn(font.className, "py-5")}>
+          <div className="container mx-auto max-w-7xl h-full">
+            <SiteHeader />
+            {children}
+          </div>
+          <Toaster />
+        </body>
+      </AppProvider>
     </html>
   );
 }

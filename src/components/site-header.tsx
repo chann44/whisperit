@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Logo } from "./logo";
 import { cn } from "@/lib/utils";
-import { buttonVariants } from "./ui/Button";
+import { buttonVariants } from "./ui/button";
 
 export function SiteHeader() {
   return (
