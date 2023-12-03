@@ -1,1 +1,1 @@
-1. Next thing is AUTH
+1. Next thing is User navbar
