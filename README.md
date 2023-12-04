@@ -1,1 +1,1 @@
-1. Next thing is User navbar
+1. Next thing is Auth flow changes
