@@ -22,7 +22,7 @@ export function ModalLogin() {
   }
 
   return (
-    <Dialog open>
+    <Dialog>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle>Create a Profile</DialogTitle>
