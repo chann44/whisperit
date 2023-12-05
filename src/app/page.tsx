@@ -5,5 +5,5 @@ import { useSession } from "next-auth/react";
 
 export default function Home() {
   const { data } = useSession();
-  return <div>{data?.user?.email ? data.user.email : <ModalLogin />}</div>;
+  return <div>{data?.user?.email ? data.user.email : null}</div>;
 }

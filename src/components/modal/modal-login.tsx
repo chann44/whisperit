@@ -10,7 +10,12 @@ import {
 import { useEffect, useState } from "react";
 import { ContinueWithGoogle } from "../continue-with-google";
 
-export function ModalLogin() {
+interface ModalLoginProps {
+  open: boolean;
+}
+
+export function ModalLogin(props: ModalLoginProps) {
+  const [isModalOpen, setIsModalOpen] = useState(() => props.open);
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -22,7 +27,7 @@ export function ModalLogin() {
   }
 
   return (
-    <Dialog>
+    <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle>Create a Profile</DialogTitle>

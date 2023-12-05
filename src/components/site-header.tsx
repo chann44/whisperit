@@ -20,9 +20,8 @@ export function SiteHeader() {
             email={session?.data?.user?.email ?? "NO EMAIL"}
             name={`${session?.data?.user?.name}`}
           />
-        ) : (
-          <ModalLogin />
-        )}
+        ) : null}
+        <Link href={"/login"}>Login</Link>
       </div>
     </header>
   );
